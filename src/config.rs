@@ -3,7 +3,7 @@ use std::fs;
 use anyhow::Result;
 use serde::Deserialize;
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]
 pub struct Config {
     pub rustfs: RustfsConfig,
 }
@@ -16,7 +16,7 @@ impl Config {
     }
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]
 pub struct RustfsConfig {
     pub access_key: String,
     pub secret_key: String,
